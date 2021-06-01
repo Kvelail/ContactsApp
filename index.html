@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Kvelail's Contacts App</title>
+</head>
+<body class="preload"> <!-- Preload class - remove transitions after page is loaded -->
+
+    <div class="contacts-app">
+        <button class="add-btn">+</button>
+
+        <h1 class="contacts-heading">Contacts</h1>
+        
+        <form class="search-form">
+            <i class="fas fa-search fa-2x"></i>
+            <input type="text" placeholder="Search" id="search">
+        </form>
+
+        <div class="user">
+
+        </div>
+
+        <ul class="contacts">
+          
+        </ul>
+        
+        <!-- New Contact -->
+        <div class="new-contact">
+            <div class="new-contact-header">
+                <button class="cancel-btn">cancel</button>
+                <h3 class="new-contact-heading">new contact</h3>
+                <button type="submit" form="new-contact-form">done</button>
+            </div>
+
+            <form id="new-contact-form">
+                <input id="new-name" type="text" placeholder="Name" id="name" required>
+                <input id="new-phone" placeholder="Phone" required type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                <input id="new-note" type="text" placeholder="Note">
+            </form>
+        </div>
+        <!-- End of New Contact -->
+
+        <!-- Contact info -->
+        <div class="open-contact">
+            <button class="open-back">
+                <i class="fas fa-chevron-left"></i>
+                 Contacts
+            </button>
+            <div class="open-header">
+                
+            </div>
+            <div class="open-options">
+                <div class="open-box">
+                    <i class="fas fa-comment fa-2x"></i>
+                    <span>message</span>
+                </div>
+                <div class="open-box">
+                    <i class="fas fa-phone-alt fa-2x"></i>
+                    <span>call</span>
+                </div>
+                <div class="open-box">
+                    <i class="fas fa-video fa-2x"></i>
+                    <span>video</span>
+                </div>
+                <div class="open-box">
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <span>mail</span>
+                </div>
+            </div>
+            <div class="open-phone">
+                <h4>phone</h4>
+                <span></span>
+            </div>
+            <div class="open-note">
+                <h4>note</h4>
+                <span>dada</span>
+            </div>
+        </div>
+        <!-- End of Contact Info -->
+    </div>
+
+    <div class="blur-overlay"></div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
